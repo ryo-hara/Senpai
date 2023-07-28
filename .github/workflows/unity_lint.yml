@@ -1,0 +1,25 @@
+name: Unity Lint
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "unity_lint"
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install dotnet
+        run: sudo apt install dotnet6
+      
+      - name: check version
+        run: dotnet --version
+
+      - name: install reshaper global tools
+        run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
+      
+      - name: run reshaper
+        run: jb inspectcode Senpai.sln --build --eXtensions=JetBrains.Unity --output=lint_output.txt
