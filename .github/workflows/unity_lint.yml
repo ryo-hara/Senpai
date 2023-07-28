@@ -22,7 +22,7 @@ jobs:
         run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
       
       - name: run reshaper
-        run: jb inspectcode Senpai.sln --build --eXtensions=JetBrains.Unity --output=lint_output.txt
+        run: jb inspectcode Senpai.sln -o=lint_output.txt
 
       - name: output
         run: cat lint_output.txt
