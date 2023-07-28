@@ -18,6 +18,6 @@ public class test : MonoBehaviour
     {
         var test = 0;
         string a = "";
-        
+        string BBBB = "";
     }
 }
