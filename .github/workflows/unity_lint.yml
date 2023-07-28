@@ -17,6 +17,10 @@ jobs:
       
       - name: check version
         run: dotnet --version
+      - name: check pwd
+        run: pwd
+      - name: ls
+        run: ls
 
       - name: install reshaper global tools
         run: dotnet tool install -g JetBrains.ReSharper.GlobalTools
