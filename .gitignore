@@ -71,4 +71,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Lintツールで使うファイルを除外設定から外す
 !Senpai.sln
+!Assembly-CSharp.csproj
